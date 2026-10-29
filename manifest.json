@@ -1,0 +1,70 @@
+﻿{
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+    "manifestVersion": "devPreview",
+    "version": "0.92",
+    "id": "98e180fd-7ce4-501a-af99-e33d5f313a7c",
+    "packageName": "com.cowork.plugin.noibu",
+    "developer": {
+        "name": "Noibu",
+        "websiteUrl": "https://www.noibu.com",
+        "privacyUrl": "https://www.noibu.com/privacy-policy",
+        "termsOfUseUrl": "https://www.noibu.com/terms-of-service"
+    },
+    "name": {
+        "short": "Noibu",
+        "full": "Noibu Analytics for Copilot Cowork"
+    },
+    "description": {
+        "short": "Ask Noibu about your store's sessions, errors, and performance.",
+        "full": "Noibu brings ecommerce analytics into Microsoft 365 Copilot Cowork. Ask in natural language about sessions, conversion, revenue, page performance, priority errors, releases, and session replays for any domain in your Noibu account. Sign in with your Noibu credentials on first use."
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "accentColor": "#0B5FFF",
+    "agentSkills": [
+        {
+            "folder": "./skills/ab-test-opportunity-finder"
+        },
+        {
+            "folder": "./skills/accessibility-audit"
+        },
+        {
+            "folder": "./skills/build-business-context"
+        },
+        {
+            "folder": "./skills/checkout-analysis"
+        },
+        {
+            "folder": "./skills/product-analysis"
+        },
+        {
+            "folder": "./skills/querying-noibu-data"
+        },
+        {
+            "folder": "./skills/segment-analysis"
+        },
+        {
+            "folder": "./skills/setup-noibu"
+        },
+        {
+            "folder": "./skills/store-pulse"
+        },
+        {
+            "folder": "./skills/tech-diagnosis"
+        }
+    ],
+    "agentConnectors": [
+        {
+            "toolSource": {
+                "remoteMcpServer": {
+                    "mcpServerUrl": "https://mcp.noibu.com/mcp"
+                }
+            },
+            "description": "Noibu ecommerce analytics: sessions, page performance, errors, releases, session replay.",
+            "id": "noibu",
+            "displayName": "Noibu MCP Server"
+        }
+    ]
+}
